@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Malagasy Mifohaza</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #e31837; /* rouge drapeau malgache */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header img {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  header h1 {
+    display: inline-block;
+    margin: 0;
+    font-weight: 700;
+  }
+  header p {
+    font-style: italic;
+    margin: 5px 0 0;
+  }
+  main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  .btn-section {
+    background: #009640; /* vert drapeau */
+    color: white;
+    border: none;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  .btn-section:hover {
+    background: #00732a;
+  }
+  footer {
+    background: #003893; /* bleu drapeau */
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 40px;
+  }
+  /* Modale */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1500; 
+    padding-top: 80px; 
+    left: 0; top: 0;
+    width: 100%; height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    color: #000;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Madagascar.svg" alt="Drapeau de Madagascar" />
+  <h1>Malagasy Mifohaza</h1>
+  <p>Fahamarinana, Asa, Finoana</p>
+</header>
+
+<main>
+  <button class="btn-section" data-modal="modal1">Histoire de l'indépendance</button>
+  <button class="btn-section" data-modal="modal2">Situation actuelle</button>
+  <button class="btn-section" data-modal="modal3">Jeunesse et avenir</button>
+</main>
+
+<footer>
+  Contact : <a href="mailto:malagasymifohaza@gmail.com" style="color:#fff;">malagasymifohaza@gmail.com</a>
+</footer>
+
+<!-- Modales -->
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Histoire de l'indépendance</h2>
+    <p>Madagascar a une histoire riche avec des militants courageux qui ont combattu pour la liberté...</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Situation actuelle</h2>
+    <p>Malheureusement, aujourd'hui, nous faisons face à des divisions, un sous-développement, et une jeunesse en quête de sens...</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Jeunesse et avenir</h2>
+    <p>La jeunesse est l'avenir de Madagascar. Il est crucial de réveiller leur conscience et les engager vers un futur meilleur...</p>
+  </div>
+</div>
+
+<script>
+  // Ouvrir les modales au clic
+  document.querySelectorAll('.btn-section').forEach(button => {
+    button.addEventListener('click', () => {
+      const modalId = button.getAttribute('data-modal');
+      document.getElementById(modalId).style.display = 'block';
+    });
+  });
+  // Fermer les modales
+  document.querySelectorAll('.close-btn').forEach(span => {
+    span.addEventListener('click', () => {
+      span.parentElement.parentElement.style.display = 'none';
+    });
+  });
+  // Fermer si clic en dehors de la modale
+  window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
