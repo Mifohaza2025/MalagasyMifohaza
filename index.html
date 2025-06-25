@@ -13,7 +13,7 @@
     padding: 0;
   }
   header {
-    background: #e31837;
+    background: #e31837; /* rouge drapeau malgache */
     color: white;
     padding: 20px 10px;
     text-align: center;
@@ -25,8 +25,6 @@
     height: 50px;
     vertical-align: middle;
     margin-right: 10px;
-    border-radius: 4px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.2);
   }
   header h1 {
     display: inline-block;
@@ -43,7 +41,7 @@
     margin: auto;
   }
   .btn-section {
-    background: #009640;
+    background: #009640; /* vert drapeau */
     color: white;
     border: none;
     padding: 20px;
@@ -59,12 +57,13 @@
     background: #00732a;
   }
   footer {
-    background: #003893;
+    background: #003893; /* bleu drapeau */
     color: white;
     text-align: center;
     padding: 15px 10px;
     margin-top: 40px;
   }
+  /* Modale */
   .modal {
     display: none; 
     position: fixed; 
@@ -95,12 +94,20 @@
   .close-btn:hover {
     color: #000;
   }
+  /* Texte dans modales */
+  .modal-content p, .modal-content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .modal-content ul {
+    padding-left: 20px;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="drapeau.png" alt="Drapeau de Madagascar" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Madagascar.svg" alt="Drapeau de Madagascar" />
   <h1>Malagasy Mifohaza</h1>
   <p>Fahamarinana, Asa, Finoana</p>
 </header>
@@ -109,6 +116,7 @@
   <button class="btn-section" data-modal="modal1">Histoire de l'indépendance</button>
   <button class="btn-section" data-modal="modal2">Situation actuelle</button>
   <button class="btn-section" data-modal="modal3">Jeunesse et avenir</button>
+  <button class="btn-section" data-modal="modal5">💖 Soutenir le projet</button>
 </main>
 
 <footer>
@@ -120,8 +128,26 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <span class="close-btn">&times;</span>
-    <h2>Histoire de l'indépendance</h2>
-    <p>Madagascar a une histoire riche avec des militants courageux qui ont combattu pour la liberté...</p>
+    <h2>L’Histoire de Madagascar : Une Nation à Réveiller</h2>
+    <p style="white-space: pre-wrap">
+Madagascar, la Grande Île de l’océan Indien, est une terre d’héritage unique, née d’un brassage entre les peuples austronésiens et africains. Son peuple, le Malagasy, possède une richesse culturelle, une identité profonde et une histoire marquée par la résilience.
+
+Du royaume de Merina aux luttes pour l’indépendance, Madagascar a vu naître des leaders comme Ranavalona I, Radama, Rainilaiarivony, Jean Ralaimongo, et les nationalistes du MDRM. Le 29 mars 1947, des milliers de Malgaches se sont levés dans une révolte sanglante pour réclamer la liberté, écrasée dans le silence de l’Histoire coloniale.
+
+En 1960, Madagascar devient officiellement indépendant. Mais cette indépendance politique n’a pas toujours été accompagnée d’une vraie souveraineté économique, sociale ou morale. Des décennies de corruption, de dictatures déguisées, d’ingérences étrangères et d’injustices sociales ont freiné l’épanouissement de la nation.
+
+Aujourd’hui encore, la jeunesse malgache se cherche, souvent livrée à elle-même, confrontée au chômage, à l’exode rural, à la perte des repères spirituels et historiques.
+
+Mais il n’est pas trop tard.
+
+👉 Malagasy Mifohaza n’est pas qu’un slogan, c’est un cri d’alarme. Une prière. Un appel.  
+Réveillons-nous. Retrouvons la foi. Travaillons ensemble. Soyons unis sans distinction de religion, d’origine ou de statut social.
+
+Reprenons notre Histoire. Honorons nos ancêtres par l’action juste. Bâtissons un avenir avec les valeurs de fahamarinana (vérité), asa (travail), et finoana (foi).
+
+Madagascar a le potentiel d’être un modèle de paix, de foi, et de développement en Afrique et dans le monde.  
+Mais cela commence par nous. Aujourd’hui.
+    </p>
   </div>
 </div>
 
@@ -129,7 +155,7 @@
   <div class="modal-content">
     <span class="close-btn">&times;</span>
     <h2>Situation actuelle</h2>
-    <p>Malheureusement, aujourd'hui, nous faisons face à des divisions, un sous-développement, et une jeunesse en quête de sens...</p>
+    <p>Malheureusement, aujourd’hui, nous faisons face à des divisions, un sous-développement, et une jeunesse en quête de sens. Trop souvent, le peuple malgache s’oppose, s’insulte, et se méfie, oubliant que seule l’union fera notre force.</p>
   </div>
 </div>
 
@@ -137,29 +163,48 @@
   <div class="modal-content">
     <span class="close-btn">&times;</span>
     <h2>Jeunesse et avenir</h2>
-    <p>La jeunesse est l'avenir de Madagascar. Il est crucial de réveiller leur conscience et les engager vers un futur meilleur...</p>
+    <p>La jeunesse est l’avenir de Madagascar. Il est crucial de réveiller leur conscience et les engager vers un futur meilleur, basé sur les valeurs, l’éducation, le travail, et la foi. Le présent est important, mais sans vision d’avenir, notre nation risque de s’éteindre.</p>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Soutenir Malagasy Mifohaza</h2>
+    <p>Tu crois en ce projet ? Tu veux aider ? 🙏</p>
+    <ul>
+      <li><strong>📱 Mvola :</strong> 034 12 345 67 (Nom)</li>
+      <li><strong>📱 Orange Money :</strong> 032 76 543 21 (Nom)</li>
+      <li><strong>💌 Email :</strong> <a href="mailto:malagasymifohaza@gmail.com">malagasymifohaza@gmail.com</a></li>
+      <li><strong>🌍 PayPal :</strong> <a href="https://paypal.me/tonlien" target="_blank" rel="noopener noreferrer">paypal.me/tonlien</a></li>
+    </ul>
+    <p>Merci pour ton soutien. Ensemble, on éveille une nation 🇲🇬</p>
   </div>
 </div>
 
 <script>
   document.querySelectorAll('.btn-section').forEach(button => {
-    button.addEventListener('click', () => {
-      const modalId = button.getAttribute('data-modal');
-      document.getElementById(modalId).style.display = 'block';
-    });
+    const modalId = button.getAttribute('data-modal');
+    if (modalId) {
+      button.addEventListener('click', () => {
+        document.getElementById(modalId).style.display = 'block';
+      });
+    }
   });
+
   document.querySelectorAll('.close-btn').forEach(span => {
     span.addEventListener('click', () => {
       span.parentElement.parentElement.style.display = 'none';
     });
   });
+
   window.onclick = function(event) {
     document.querySelectorAll('.modal').forEach(modal => {
       if (event.target === modal) {
         modal.style.display = 'none';
       }
     });
-  }
+  };
 </script>
 
 </body>
