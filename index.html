@@ -1,220 +1,115 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="mg">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malagasy Mifohaza</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff;
-      color: #333;
-      margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #222;
     }
     header {
       background: #e31837;
       color: white;
-      padding: 20px 10px;
+      padding: 15px;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
-    header img {
-      height: 50px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    header h1 {
-      display: inline-block;
-      margin: 0;
-      font-weight: 700;
-    }
-    header p {
-      font-style: italic;
-      margin: 5px 0 0;
-    }
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .btn-section {
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       background: #009640;
+    }
+    nav a {
+      padding: 15px 20px;
       color: white;
-      border: none;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #007732;
+    }
+    section {
       padding: 20px;
-      margin: 15px 0;
-      width: 100%;
-      font-size: 1.2rem;
-      font-weight: 600;
-      cursor: pointer;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
       border-radius: 8px;
-      transition: background 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .btn-section:hover {
-      background: #00732a;
-    }
+    h2 { margin-bottom: 15px; color: #e31837; }
+    p { line-height: 1.6; margin-bottom: 15px; }
     footer {
       background: #003893;
       color: white;
       text-align: center;
-      padding: 15px 10px;
+      padding: 15px;
       margin-top: 40px;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1500;
-      padding-top: 80px;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.7);
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 700px;
-      position: relative;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .close-btn {
-      color: #aaa;
-      position: absolute;
-      top: 15px; right: 20px;
-      font-size: 28px;
-      font-weight: bold;
+    form button {
+      background: #009640;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
     }
-    .close-btn:hover {
-      color: #000;
-    }
-    .modal-content p, .modal-content ul {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .modal-content ul {
-      padding-left: 20px;
+    .quote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #ccc;
+      padding-left: 10px;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Malagasy Mifohaza</h1>
+    <p>Fahamarinana, Asa, Finoana</p>
+  </header>
 
-<header>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Madagascar.svg" alt="Drapeau de Madagascar" />
-  <h1>Malagasy Mifohaza</h1>
-  <p>Fahamarinana, Asa, Finoana</p>
-</header>
+  <nav>
+    <a href="#fampahafantarana">Fampahafantarana</a>
+    <a href="#tantara">Tantarantsika</a>
+    <a href="#toedraharaha">Toe-draharaha</a>
+    <a href="#tanora">Tanora & Firenena</a>
+    <a href="#hetsika">Hetsika</a>
+    <a href="#fanohanana">Fanohanana</a>
+    <a href="#vaovao">Vaovao</a>
+    <a href="#mifandray">Mifandraisa</a>
+  </nav>
 
-<main>
-  <button class="btn-section" data-modal="modal1">Histoire de l'indépendance</button>
-  <button class="btn-section" data-modal="modal2">Situation actuelle</button>
-  <button class="btn-section" data-modal="modal3">Jeunesse et avenir</button>
-  <button class="btn-section" data-modal="modal5">Soutenir le projet</button>
-  <button class="btn-section" data-modal="modal7">Rejoindre la communauté</button>
-</main>
-
-<footer>
-  Contact : <a href="mailto:malagasymifohaza@gmail.com" style="color:#fff;">malagasymifohaza@gmail.com</a>
-</footer>
-
-<!-- Modales existantes -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>L’Histoire de Madagascar : Une Nation à Réveiller</h2>
-    <p style="white-space: pre-wrap">
-Madagascar, la Grande Île de l’océan Indien, est une terre d’héritage unique, née d’un brassage entre les peuples austronésiens et africains...
+  <section id="fampahafantarana">
+    <h2>Fampahafantarana</h2>
+    <p>Niorina sy notanterahina ity hetsika Malagasy Mifohaza ity taorian'ny fandinihana lalina ny zava-misy amin'ny tanora sy ny vahoaka Malagasy. Mihitatra ny fahantrana, mirongatra ny kolikoly, mandalo mosary sy tsy fanjarian-tsakafo ny maro. Tsy misy intsony ny firaisankina eo amin'ny samy Malagasy, miandry fotsiny ny fitondrana no ataon'ny vahoaka.
     </p>
-  </div>
-</div>
+    <p>Ny tanora, izay tokony ho fanantenana, dia maniry handao ny fireneny hivelatra any ivelany. Mitanila amin'ny fety, zava-pisotro, fitadiavam-bola haingana, ary fiainana feno fakam-panahy izy ireo.</p>
+    <p>Androany, tonga ny fotoana hiaingana. Mila mifoha. Mila madio. Mila mitondra fanovana. Mila mandroso amin'ny fahamarinana, amin'ny asa, amin'ny finoana. Mila mitady fahendrena sy fiainana feno dikany.</p>
+    <div class="quote">
+      "Ny olona hendry dia ilay mifehy ny tenany, miala amin’izay mampidi-doza azy, ary manomana ny hoaviny tahaka ny olona handeha lavitra."
+    </div>
+  </section>
 
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Situation actuelle</h2>
-    <p>Malheureusement, aujourd’hui, nous faisons face à des divisions, un sous-développement, et une jeunesse en quête de sens...</p>
-  </div>
-</div>
+  <!-- Les autres sections seront ajoutées après selon la suite de ta demande -->
 
-<div id="modal3" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Jeunesse et avenir</h2>
-    <p>La jeunesse est l’avenir de Madagascar...</p>
-  </div>
-</div>
-
-<div id="modal5" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Soutenir Malagasy Mifohaza</h2>
-    <p>Tu crois en ce projet ? Tu veux aider ? </p>
-    <ul>
-      <li><strong>Email :</strong> <a href="mailto:malagasymifohaza@gmail.com">malagasymifohaza@gmail.com</a></li>
-      <li><strong>PayPal :</strong> <a href="paypal.me/MalagasyMifoha." target="_blank" rel="noopener noreferrer">paypal.me/MalagasyMifoha</a></li>
-    </ul>
-    <p>Merci pour ton soutien. Ensemble, on éveille une nation 🇲🇬</p>
-  </div>
-</div>
-
-<!-- Nouvelle modale : inscription -->
-<div id="modal7" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Rejoins le mouvement 🇲🇬</h2>
-    <p>Inscris-toi pour recevoir nos actualités, événements, et appels à l'action :</p>
-    <form id="subscribeForm">
-      <input type="text" id="name" name="name" placeholder="Ton nom" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
-      <input type="email" id="email" name="email" placeholder="Ton email" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
-      <button type="submit" style="background:#009640; color:white; padding:10px 20px; border:none; border-radius:6px; font-weight:600; cursor:pointer;">S'inscrire</button>
-    </form>
-    <p id="subscribeMessage" style="margin-top:15px; color:green;"></p>
-  </div>
-</div>
-
-<script>
-  // Gestion modales
-  document.querySelectorAll('.btn-section').forEach(button => {
-    const modalId = button.getAttribute('data-modal');
-    if (modalId) {
-      button.addEventListener('click', () => {
-        document.getElementById(modalId).style.display = 'block';
-      });
-    }
-  });
-
-  document.querySelectorAll('.close-btn').forEach(span => {
-    span.addEventListener('click', () => {
-      span.parentElement.parentElement.style.display = 'none';
-    });
-  });
-
-  window.onclick = function(event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  };
-
-  // Formulaire inscription
-  document.getElementById("subscribeForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-
-    if (name && email) {
-      document.getElementById("subscribeMessage").textContent = "Merci, " + name + "! Tu es maintenant inscrit.";
-      document.getElementById("subscribeForm").reset();
-    }
-  });
-</script>
+  <footer>
+    <p>Mifandraisa aminay: <a href="mailto:malagasymifohaza@gmail.com" style="color:white">malagasymifohaza@gmail.com</a></p>
+    <p>Soutien: <a href="https://paypal.me/MalagasyMifoha" style="color:white" target="_blank">paypal.me/MalagasyMifoha</a></p>
+  </footer>
 
 </body>
 </html>
-
