@@ -1,108 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Malagasy Mifohaza</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background: #e31837; /* rouge drapeau malgache */
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  header img {
-    height: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  header h1 {
-    display: inline-block;
-    margin: 0;
-    font-weight: 700;
-  }
-  header p {
-    font-style: italic;
-    margin: 5px 0 0;
-  }
-  main {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  .btn-section {
-    background: #009640; /* vert drapeau */
-    color: white;
-    border: none;
-    padding: 20px;
-    margin: 15px 0;
-    width: 100%;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
-  .btn-section:hover {
-    background: #00732a;
-  }
-  footer {
-    background: #003893; /* bleu drapeau */
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: 40px;
-  }
-  /* Modale */
-  .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1500; 
-    padding-top: 80px; 
-    left: 0; top: 0;
-    width: 100%; height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.7);
-  }
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 700px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  .close-btn {
-    color: #aaa;
-    position: absolute;
-    top: 15px; right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .close-btn:hover {
-    color: #000;
-  }
-  /* Texte dans modales */
-  .modal-content p, .modal-content ul {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .modal-content ul {
-    padding-left: 20px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malagasy Mifohaza</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #e31837;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    header h1 {
+      display: inline-block;
+      margin: 0;
+      font-weight: 700;
+    }
+    header p {
+      font-style: italic;
+      margin: 5px 0 0;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .btn-section {
+      background: #009640;
+      color: white;
+      border: none;
+      padding: 20px;
+      margin: 15px 0;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .btn-section:hover {
+      background: #00732a;
+    }
+    footer {
+      background: #003893;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1500;
+      padding-top: 80px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 700px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .close-btn {
+      color: #aaa;
+      position: absolute;
+      top: 15px; right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      color: #000;
+    }
+    .modal-content p, .modal-content ul {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .modal-content ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -116,37 +114,21 @@
   <button class="btn-section" data-modal="modal1">Histoire de l'indépendance</button>
   <button class="btn-section" data-modal="modal2">Situation actuelle</button>
   <button class="btn-section" data-modal="modal3">Jeunesse et avenir</button>
-  <button class="btn-section" data-modal="modal5"> Soutenir le projet</button>
+  <button class="btn-section" data-modal="modal5">Soutenir le projet</button>
+  <button class="btn-section" data-modal="modal7">Rejoindre la communauté</button>
 </main>
 
 <footer>
   Contact : <a href="mailto:malagasymifohaza@gmail.com" style="color:#fff;">malagasymifohaza@gmail.com</a>
 </footer>
 
-<!-- Modales -->
-
+<!-- Modales existantes -->
 <div id="modal1" class="modal">
   <div class="modal-content">
     <span class="close-btn">&times;</span>
     <h2>L’Histoire de Madagascar : Une Nation à Réveiller</h2>
     <p style="white-space: pre-wrap">
-Madagascar, la Grande Île de l’océan Indien, est une terre d’héritage unique, née d’un brassage entre les peuples austronésiens et africains. Son peuple, le Malagasy, possède une richesse culturelle, une identité profonde et une histoire marquée par la résilience.
-
-Du royaume de Merina aux luttes pour l’indépendance, Madagascar a vu naître des leaders comme Ranavalona I, Radama, Rainilaiarivony, Jean Ralaimongo, et les nationalistes du MDRM. Le 29 mars 1947, des milliers de Malgaches se sont levés dans une révolte sanglante pour réclamer la liberté, écrasée dans le silence de l’Histoire coloniale.
-
-En 1960, Madagascar devient officiellement indépendant. Mais cette indépendance politique n’a pas toujours été accompagnée d’une vraie souveraineté économique, sociale ou morale. Des décennies de corruption, de dictatures déguisées, d’ingérences étrangères et d’injustices sociales ont freiné l’épanouissement de la nation.
-
-Aujourd’hui encore, la jeunesse malgache se cherche, souvent livrée à elle-même, confrontée au chômage, à l’exode rural, à la perte des repères spirituels et historiques.
-
-Mais il n’est pas trop tard.
-
-👉 Malagasy Mifohaza n’est pas qu’un slogan, c’est un cri d’alarme. Une prière. Un appel.  
-Réveillons-nous. Retrouvons la foi. Travaillons ensemble. Soyons unis sans distinction de religion, d’origine ou de statut social.
-
-Reprenons notre Histoire. Honorons nos ancêtres par l’action juste. Bâtissons un avenir avec les valeurs de fahamarinana (vérité), asa (travail), et finoana (foi).
-
-Madagascar a le potentiel d’être un modèle de paix, de foi, et de développement en Afrique et dans le monde.  
-Mais cela commence par nous. Aujourd’hui.
+Madagascar, la Grande Île de l’océan Indien, est une terre d’héritage unique, née d’un brassage entre les peuples austronésiens et africains...
     </p>
   </div>
 </div>
@@ -155,7 +137,7 @@ Mais cela commence par nous. Aujourd’hui.
   <div class="modal-content">
     <span class="close-btn">&times;</span>
     <h2>Situation actuelle</h2>
-    <p>Malheureusement, aujourd’hui, nous faisons face à des divisions, un sous-développement, et une jeunesse en quête de sens. Trop souvent, le peuple malgache s’oppose, s’insulte, et se méfie, oubliant que seule l’union fera notre force.</p>
+    <p>Malheureusement, aujourd’hui, nous faisons face à des divisions, un sous-développement, et une jeunesse en quête de sens...</p>
   </div>
 </div>
 
@@ -163,7 +145,7 @@ Mais cela commence par nous. Aujourd’hui.
   <div class="modal-content">
     <span class="close-btn">&times;</span>
     <h2>Jeunesse et avenir</h2>
-    <p>La jeunesse est l’avenir de Madagascar. Il est crucial de réveiller leur conscience et les engager vers un futur meilleur, basé sur les valeurs, l’éducation, le travail, et la foi. Le présent est important, mais sans vision d’avenir, notre nation risque de s’éteindre.</p>
+    <p>La jeunesse est l’avenir de Madagascar...</p>
   </div>
 </div>
 
@@ -173,14 +155,30 @@ Mais cela commence par nous. Aujourd’hui.
     <h2>Soutenir Malagasy Mifohaza</h2>
     <p>Tu crois en ce projet ? Tu veux aider ? 🙏</p>
     <ul>
-      <li><strong> Email :</strong> <a href="mailto:malagasymifohaza@gmail.com">malagasymifohaza@gmail.com</a></li>
-      <li><strong> PayPal :</strong> <a href="https://paypal.me/MalagasyMifoha" target="_blank" rel="noopener noreferrer">paypal.me/tonlien</a></li>
+      <li><strong>Email :</strong> <a href="mailto:malagasymifohaza@gmail.com">malagasymifohaza@gmail.com</a></li>
+      <li><strong>PayPal :</strong> <a href="https://paypal.me/MalagasyMifoha" target="_blank" rel="noopener noreferrer">paypal.me/MalagasyMifoha</a></li>
     </ul>
     <p>Merci pour ton soutien. Ensemble, on éveille une nation 🇲🇬</p>
   </div>
 </div>
 
+<!-- Nouvelle modale : inscription -->
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Rejoins le mouvement 🇲🇬</h2>
+    <p>Inscris-toi pour recevoir nos actualités, événements, et appels à l'action :</p>
+    <form id="subscribeForm">
+      <input type="text" id="name" name="name" placeholder="Ton nom" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
+      <input type="email" id="email" name="email" placeholder="Ton email" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
+      <button type="submit" style="background:#009640; color:white; padding:10px 20px; border:none; border-radius:6px; font-weight:600; cursor:pointer;">S'inscrire</button>
+    </form>
+    <p id="subscribeMessage" style="margin-top:15px; color:green;"></p>
+  </div>
+</div>
+
 <script>
+  // Gestion modales
   document.querySelectorAll('.btn-section').forEach(button => {
     const modalId = button.getAttribute('data-modal');
     if (modalId) {
@@ -203,7 +201,20 @@ Mais cela commence par nous. Aujourd’hui.
       }
     });
   };
+
+  // Formulaire inscription
+  document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (name && email) {
+      document.getElementById("subscribeMessage").textContent = "Merci, " + name + "! Tu es maintenant inscrit.";
+      document.getElementById("subscribeForm").reset();
+    }
+  });
 </script>
 
 </body>
 </html>
+
