@@ -11,45 +11,68 @@
       font-family: 'Roboto', sans-serif;
       background: #f4f4f4;
       color: #222;
+      line-height: 1.6;
     }
     header {
-      background: #e31837;
+      background: linear-gradient(135deg, #e31837, #009640);
       color: white;
-      padding: 15px;
+      padding: 40px 15px;
       text-align: center;
+    }
+    header h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.1em;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background: #009640;
+      background: #003893;
     }
     nav a {
       padding: 15px 20px;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s;
     }
     nav a:hover {
-      background: #007732;
+      background: #002670;
     }
     section {
-      padding: 20px;
+      padding: 30px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 25px auto;
       background: white;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
-    h2 { margin-bottom: 15px; color: #e31837; }
-    p { line-height: 1.6; margin-bottom: 15px; }
-    footer {
-      background: #003893;
-      color: white;
+    h2 {
+      color: #e31837;
+      margin-bottom: 15px;
+      font-size: 1.8em;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .quote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #ccc;
+      padding-left: 10px;
+      margin: 20px 0;
+    }
+    .event {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #009640;
+      margin-bottom: 10px;
+      border-radius: 6px;
     }
     form input, form textarea {
       display: block;
@@ -66,20 +89,42 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
     }
-    .quote {
-      font-style: italic;
-      color: #555;
-      border-left: 4px solid #ccc;
-      padding-left: 10px;
-      margin: 20px 0;
+    form button:hover {
+      background: #007732;
+    }
+    footer {
+      background: #003893;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8em; }
+      nav a {
+        flex: 1 1 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.2);
+      }
+      section {
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Malagasy Mifohaza</h1>
-    <p>Fahamarinana, Asa, Finoana</p>
+    <h1>🇲🇬 Malagasy Mifohaza</h1>
+    <p>Fahamarinana • Asa • Finoana</p>
   </header>
 
   <nav>
@@ -95,21 +140,65 @@
 
   <section id="fampahafantarana">
     <h2>Fampahafantarana</h2>
-    <p>Niorina sy notanterahina ity hetsika Malagasy Mifohaza ity taorian'ny fandinihana lalina ny zava-misy amin'ny tanora sy ny vahoaka Malagasy. Mihitatra ny fahantrana, mirongatra ny kolikoly, mandalo mosary sy tsy fanjarian-tsakafo ny maro. Tsy misy intsony ny firaisankina eo amin'ny samy Malagasy, miandry fotsiny ny fitondrana no ataon'ny vahoaka.
-    </p>
-    <p>Ny tanora, izay tokony ho fanantenana, dia maniry handao ny fireneny hivelatra any ivelany. Mitanila amin'ny fety, zava-pisotro, fitadiavam-bola haingana, ary fiainana feno fakam-panahy izy ireo.</p>
-    <p>Androany, tonga ny fotoana hiaingana. Mila mifoha. Mila madio. Mila mitondra fanovana. Mila mandroso amin'ny fahamarinana, amin'ny asa, amin'ny finoana. Mila mitady fahendrena sy fiainana feno dikany.</p>
-    <div class="quote">
-      "Ny olona hendry dia ilay mifehy ny tenany, miala amin’izay mampidi-doza azy, ary manomana ny hoaviny tahaka ny olona handeha lavitra."
+    <p>Niorina sy notanterahina ny hetsika <strong>Malagasy Mifohaza</strong> taorian'ny fandinihana lalina ny zava-misy amin'ny tanora sy ny vahoaka Malagasy. Mihitatra ny fahantrana, mirongatra ny kolikoly, mandalo mosary sy tsy fanjarian-tsakafo ny maro. Tsy misy intsony ny firaisankina eo amin'ny samy Malagasy.</p>
+    <p>Ny tanora, izay tokony ho fanantenana, dia maniry handao ny fireneny hivelatra any ivelany. Mitanila amin’ny fety, fiainana tsy misy tanjona, ary zava-pisotro. Mila fiovana lalina isika.</p>
+    <div class="quote">"Ny olona hendry dia ilay mifehy ny tenany, miala amin’izay mampidi-doza azy, ary manomana ny hoaviny tahaka ny olona handeha lavitra."</div>
+  </section>
+
+  <section id="tantara">
+    <h2>Tantarantsika</h2>
+    <p>Malagasy Mifohaza dia teraka avy amin’ny faniriana hanova ny fomba fisainana sy ny fihetsiky ny tanora. Niforona tamin’ny fihaonana madinika, fivoriana ara-panahy sy asa soa, dia lasa hetsika nasionaly mikendry ny fanarenana ara-tsaina sy ara-panahy ny tanora Malagasy.</p>
+  </section>
+
+  <section id="toedraharaha">
+    <h2>Toe-draharaha amin’izao fotoana izao</h2>
+    <p>Amin’izao fotoana izao dia maro ny fianakaviana miaina amin’ny fahasahiranana lalina. Ny tsy fananan’asa, ny tsy fanabeazana ampy, ary ny kolikoly dia manakana ny fivoaran’ny firenena. Malagasy Mifohaza dia manentana ny rehetra hijoro amin’ny fahamarinana sy hiasa amin’ny fanarenana an’i Madagasikara.</p>
+  </section>
+
+  <section id="tanora">
+    <h2>Tanora & Firenena</h2>
+    <p>Ny tanora no fanalahidin’ny fiovan’ny firenena. Tokony hianatra, hiasa, ary hanana soatoavina madio. Malagasy Mifohaza dia manohana ny fanabeazana, ny asa tanana, ny asa sosialy, ary ny fandraisana andraikitra amin’ny fiarahamonina.</p>
+  </section>
+
+  <section id="hetsika">
+    <h2>Hetsika sy Asa</h2>
+    <div class="event">
+      <strong>📅 Novambra 2025 :</strong> Fanentanana amin’ny sekoly momba ny soatoavina sy ny fanabeazana ara-panahy.
+    </div>
+    <div class="event">
+      <strong>📅 Desambra 2025 :</strong> Fizarana sakafo sy fanomezana ho an’ny fianakaviana sahirana.
+    </div>
+    <div class="event">
+      <strong>📅 2026 :</strong> Fampiofanana ho an’ny tanora amin’ny asa tanana sy ny teknolojia.
     </div>
   </section>
 
-  <!-- Les autres sections seront ajoutées après selon la suite de ta demande -->
+  <section id="fanohanana">
+    <h2>Fanohanana</h2>
+    <p>Raha maniry hanohana ny asa sy ny hetsika ataonay ianao, dia afaka mandefa fanampiana amin’ny endriny rehetra: ara-bola, fitaovana, na asa fanampiana.</p>
+    <p><strong>PayPal:</strong> <a href="https://paypal.me/MalagasyMifoha" target="_blank">paypal.me/MalagasyMifoha</a></p>
+    <p><strong>Email:</strong> malagasymifohaza@gmail.com</p>
+  </section>
+
+  <section id="vaovao">
+    <h2>Vaovao farany</h2>
+    <p>Tetikasa vaovao ho an’ny tanora: “Fampiofanana amin’ny fahaiza-mitarika sy fandraharahana” hanomboka amin’ny 2026. Hanampy ny tanora hianatra fomba fitantanana sy famoronana orinasa maharitra eto an-toerana.</p>
+  </section>
+
+  <section id="mifandray">
+    <h2>Mifandraisa aminay</h2>
+    <form action="mailto:malagasymifohaza@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="anarana" placeholder="Anaranao" required>
+      <input type="email" name="mail" placeholder="Mailakao" required>
+      <textarea name="hafatra" placeholder="Hafatrao" rows="5" required></textarea>
+      <button type="submit">Alefa</button>
+    </form>
+  </section>
 
   <footer>
-    <p>Mifandraisa aminay: <a href="mailto:malagasymifohaza@gmail.com" style="color:white">malagasymifohaza@gmail.com</a></p>
-    <p>Soutien: <a href="https://paypal.me/MalagasyMifoha" style="color:white" target="_blank">paypal.me/MalagasyMifoha</a></p>
+    <p>© 2025 Malagasy Mifohaza — Fahamarinana, Asa, Finoana</p>
+    <p>Mifandraisa aminay: <a href="mailto:malagasymifohaza@gmail.com">malagasymifohaza@gmail.com</a></p>
+    <p>Soutien: <a href="https://paypal.me/MalagasyMifoha" target="_blank">paypal.me/MalagasyMifoha</a></p>
   </footer>
-
 </body>
 </html>
